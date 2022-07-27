@@ -9,7 +9,7 @@
 async function promFun() {
   await new Promise(function (s, f) {
     setTimeout(function () {
-      s("promise1 succeeded");
+      s('promise1 succeeded');
     }, 5000);
   })
     .then(console.log)
@@ -17,7 +17,7 @@ async function promFun() {
 
   await new Promise(function (s, f) {
     setTimeout(function () {
-      s("promise2 failed");
+      s('promise2 failed');
     }, 2000);
   })
     .then(console.log)
@@ -25,7 +25,7 @@ async function promFun() {
 
   await new Promise(function (s, f) {
     setTimeout(function () {
-      s("promise3 succeeded");
+      s('promise3 succeeded');
     }, 1000);
   })
     .then(console.log)
@@ -56,23 +56,23 @@ Math.pow(5, 10); //9765625
 //String API
 //String.padStart(num)
 //String.padEnd(num)
-var str = "my string";
-var str2 = "JavaScript";
-var str3 = "object";
+var str = 'my string';
+var str2 = 'JavaScript';
+var str3 = 'object';
 str.padStart(15); //"        my strsing" ==> length 15 character
 str2.padStart(15); //"       JavaScript" ==> length 15 character
 str3.padStart(15); //
 // instead of adding spaces we add *
-str.padStart(15, "*"); //"********** my String" ==> length 15 character
-str.padStart(15, "-"); //"---------- my String" ==> length 15 character
+str.padStart(15, '*'); //"********** my String" ==> length 15 character
+str.padStart(15, '-'); //"---------- my String" ==> length 15 character
 
 //Object.getOwnPropertyDescriptors(String) ==> to get all properties for specific object
 //Object.getOwnPropertyDescriptors(String.prototype) ==> to get the protoptype chaining properties
 
 //Object.values(obj) ==> gets all the properties values in an object
 var obj = {
-  name: "javaScript",
-  category: "Web Tech.",
+  name: 'javaScript',
+  category: 'Web Tech.',
 };
 Object.values(obj); //["javaScript","Web Tech."]
 Object.keys(obj); //["name","category"]
@@ -121,7 +121,7 @@ left || right; // OR
 left && right; //AND
 
 var x = null,
-  y = "",
+  y = '',
   z = 0,
   w = false,
   n = 50,
@@ -140,10 +140,10 @@ a = z ?? 5; //z 0
 
 //chaining operator ?.
 var obj = {
-  name: "javascript",
+  name: 'javascript',
   info: {
-    type: "scripting Lang.",
-    cat: "web",
+    type: 'scripting Lang.',
+    cat: 'web',
   },
   disp() {
     return this.name;
@@ -161,13 +161,13 @@ console.log(obj.info.skills?.());
 //in ECMAScript 2020 created object named globalThis also referes to the window object
 //in both global or in an inner scope
 
-var nm = "new Feature"; //global variable
+var nm = 'new Feature'; //global variable
 
 var obj = {
-  name: "javascript",
+  name: 'javascript',
   info: {
-    type: "scripting Lang.",
-    cat: "web",
+    type: 'scripting Lang.',
+    cat: 'web',
   },
   disp() {
     return globalThis.nm;
